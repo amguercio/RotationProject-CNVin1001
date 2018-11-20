@@ -16,16 +16,8 @@
 
 #shuf -n numberoflines_topick inputfile.csv > output.txt
 
-shuf -n 50 input > output
+shuf -n 50 seqdata_list1001.csv > data_foranalyses.csv
+
 
 #or if on my comp with zsh + homebrew -- brew install coreutils
-gshuf -n 50 seqdata_list1001.csv > testtwo.csv
-
-
-#download them to the cluster
-
-wget
-
-
-#also download the reference genome from tair
-
+#gshuf -n 50 seqdata_list1001.csv > testtwo.csv
