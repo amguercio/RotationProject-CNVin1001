@@ -5,6 +5,9 @@
 ## amguercio (Angelica Guercio) 2018
 
 
+#https://www.ncbi.nlm.nih.gov/sra/?term=SRP056687
+#https://www.ncbi.nlm.nih.gov/Traces/study/?WebEnv=NCID_1_101509539_130.14.22.33_5555_1542742816_1648241546_0MetA0_S_HStore&query_key=11
+
 
 ###Extract run IDs into a separate file
 
