@@ -3,12 +3,15 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=5
 #SBATCH --mem-per-cpu=40G
-#SBATCH --time=2-00:15:00     # 2 days and 15 minutes
+#SBATCH --time=1 ##this is one day I think?
 #SBATCH --output=dl.stdout
 #SBATCH --mail-user=amguercio@ucdavis.edu
 #SBATCH --mail-type=ALL
 #SBATCH --job-name="dl"
 ####nosbatch -p for partition
+
+
+##to submit = sbatch reads_n_ref_dl.sh
 
 
 #reads_n_ref_dl.sh
