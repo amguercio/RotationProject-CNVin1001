@@ -1,6 +1,14 @@
 #!/bin/bash -l
 
+#SBATCH --nodes=1
+#SBATCH --ntasks=5
+#SBATCH --mem-per-cpu=40G
+#SBATCH --time=2-00:15:00     # 2 days and 15 minutes
 #SBATCH --output=dl.stdout
+#SBATCH --mail-user=amguercio@ucdavis.edu
+#SBATCH --mail-type=ALL
+#SBATCH --job-name="dl"
+####nosbatch -p for partition
 
 
 #reads_n_ref_dl.sh
@@ -16,9 +24,11 @@
 cd /scratch/amguercio-rotation
 
 module load sratoolkit/2.8.2-1
+##sra toolkit allows you to use the fastq-dump function to dl reads via their run ID name
+##the -I --split-files allows for PE reads files from this run ID to be downloaded into two files $line_1.fastq and $line_2.fastq
 
 cat runIDs_fordl.txt | while read line; do
-  fastq-dump -X 1 -Z $line
+  fastq-dump -I --split-files $line
   done
 
 
