@@ -13,7 +13,7 @@ module load trimmomatic/0.33
 
 cat testrunID.txt | while read line; do
   NAME=$line
-  java -jar /software/trimmomatic/0.33/static/trimmomatic-0.33.jar PE -threads 4 \
+  java -jar /software/trimmomatic/0.33/static/trimmomatic-0.33.jar PE -threads 10 \
   "$NAME"_1.fastq.gz \
   "$NAME"_2.fastq.gz \
   "$NAME"_forward_paired.fq.gz \
