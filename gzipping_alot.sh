@@ -10,5 +10,5 @@ FILES=*.fastq
 
 for f in $FILES
 do
-        pigz $f -p 4
+        pigz $f -p 10
 done
