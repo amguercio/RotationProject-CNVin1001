@@ -18,6 +18,7 @@ export PATH=$PATH:/scratch/amguercio-rotation/pigz-2.4 #path to pigz directory
 #now just use it normally! 
 
 pigz --help 
+pigz SRR1945448_1.fastq -p 4
 #for commands
 
  
