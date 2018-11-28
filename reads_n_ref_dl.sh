@@ -37,6 +37,9 @@ cat runIDs_fordl.txt | while read line; do
 #this might make it parallel the command
 #parallel -j 4 fastq-dump -I --split-files SRR1946550
 
+#for gzipped
+#fastq-dump -I --split-files SRR1946550 --gzip
+
 #also download the reference genome from tair
 
 
