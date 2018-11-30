@@ -1,10 +1,18 @@
+#getting_ENAftps.py
+
+##Script to get run IDs in order to download reads files randomly chosen from 50 accessions from the arabidopsis 1001 genomes project
+
+## amguercio (Angelica Guercio) 2018
+
+
 
 
 ##To download the files from ENA (DON'T EVEN TRY WITH THE SRA BS--SERIOUSLY)
 ##Site = https://www.ebi.ac.uk/ena/data/view/PRJNA273563
 ##Project # = PRJNA273563
 
-#Using the 'run IDs' from runIDs_fordl.txt, we can 'build' the ftp address from ena and add wget to the line
+
+#Using the 'run IDs' from runIDs_fordl.txt (our subsetted samples), we can 'build' the ftp address from ena and add wget to the line
 #then we can just run this resulting script to make it wget all of our files!
 
 #some important info about how ena ftp addresses are organized can be found here under 'Fastq file directory organisation':
