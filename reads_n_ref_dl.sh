@@ -9,8 +9,9 @@
 ##Site = https://www.ebi.ac.uk/ena/data/view/PRJNA273563
 ##Project # = PRJNA273563
 
-##just run the wget lines parsed using the 'getting_ENAftps.py' script via running the 'download_ftps.sh' script
-#just run it with 
+#use the runIDs chosen to 'build' the ftp address using the 'getting_ENAftps.py' + add wget to the lines so it's all r3ady 
+#Then just do it via running the 'download_ftps.sh' script
+#run it with 
 bash download_ftps.sh
 
 
