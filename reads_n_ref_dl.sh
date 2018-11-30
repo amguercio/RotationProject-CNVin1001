@@ -9,11 +9,12 @@
 ##Site = https://www.ebi.ac.uk/ena/data/view/PRJNA273563
 ##Project # = PRJNA273563
 
-
+##just run the wget lines parsed using the 'getting_ENAftps.py' script via running the 'download_ftps.sh' script
+#just run it with 
+bash download_ftps.sh
 
 
 #also download the reference genome from tair
-
 
 wget ftp://ftp.ensemblgenomes.org/pub/plants/release-41/fasta/arabidopsis_thaliana/dna/Arabidopsis_thaliana.TAIR10.dna.toplevel.fa.gz
 
