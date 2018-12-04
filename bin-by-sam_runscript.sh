@@ -11,4 +11,4 @@
 
 ##command to run:
 
-./bin-by-sam.py -o binnedmaps.txt -s 100000 
+python bin-by-sam_2.0.py -o binnedmaps.txt -s 100000 
