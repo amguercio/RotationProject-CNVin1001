@@ -1,8 +1,11 @@
-#reads_n_ref_dl.sh
+#####################
+#################################################
+#Script Name:         reads_n_ref_dl.sh
+#Description:         Script to download reads files from 50 accessions from the arabidopsis 1001 genomes project and thaliana reference
+#Author:              amguercio (Angelica Guercio) 2018
+#################################################
+######################
 
-##Script to download reads files randomly chosen from 50 accessions from the arabidopsis 1001 genomes project
-
-## amguercio (Angelica Guercio) 2018
 
 
 ##To download the files from ENA (DON'T EVEN TRY WITH THE SRA BS--SERIOUSLY)
