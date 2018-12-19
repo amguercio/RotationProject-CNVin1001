@@ -1,7 +1,7 @@
 #####################
 #################################################
-#Script Name:         picking_genomes.sh
-#Description:         Script to pick 50 genomes randomly from 1001 genomes project in arabidopsis
+#Script Name:         picking_accessions.sh
+#Description:         Script to pick 50 accessions randomly from 1001 genomes project in arabidopsis
 #Author:              amguercio (Angelica Guercio) 2018
 #################################################
 ######################
