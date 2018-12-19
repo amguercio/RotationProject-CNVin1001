@@ -1,49 +1,61 @@
-#plotting_mapbinning.R
+#####################
+#################################################
+#Script Name:         plotting_mapbinning.R
+#Description:         Script to plot output of bin-by-sam.py script for 50 arabidopsis genomes to look at CNVs (overplotting)
+#Author:              amguercio (Angelica Guercio) 2018
+#################################################
+######################
 
-##Script to plot output of bin-by-sam.py script for 50 arabidopsis genomes to look at CNVs (overplotting)
-
-## amguercio (Angelica Guercio) 2018
-
-
+#################################################
 #Output of bin-by-sam:
 #"One file with a line per bin of each reference sequence and a column for each input .sam library, 
 #as well as the relative coverage per input .sam library.'
 
 
+#################################################
+###Plotting Script
+
+
+##Packages to load
 #install.packages("reshape")
 library(reshape)
 library(ggplot2)
 library(scales)
 
 
+
 setwd("~/Documents/ComaiLab/scripts")
 
 
-
+###Read in data
 rawdata<- read.table("binnedmaps.txt", header = T)
-head(rawdata)
+#head(rawdata)
 
-notrawdata <- rawdata[ -c(4:51) ] #to remove the raw counts of mapped
-#Filter out Pt and Mt
+###Clean up data for plotting--Removing Unneccesary Info
+notrawdata <- rawdata[ -c(4:51) ] #to remove the raw counts of mapped reads
 chrs <- c("1", "2", "3", "4", "5")
-gooddata <- subset(notrawdata, Chrom %in% chrs)
-tail(gooddata)
+gooddata <- subset(notrawdata, Chrom %in% chrs) #to filter out Pt and Mt
+#tail(gooddata)
 
 
-
+###Re-structure Data--Wide -> Tall data
 indata <- melt(gooddata, id=c("Chrom","Strt", "End"))   #to get tall not wide data
-head(indata)
+#head(indata)
 
+##Write this dataset to a text file for looking at later
 write.table(indata, "finaldata.txt", sep="\t")
 
+
+###Starting the plot
 
 #to change bin values (x-axes labels) out of sci notation
 xvals <- format_format(scientific = FALSE)
 
-##original raw plot
+
+###Raw plot + Colored Based on Sample
 
 rawplt <- ggplot(indata, aes(x=Strt, y=value)) +
-  geom_line(aes(fill=variable), alpha=0.4) +
+  geom_line(aes(fill=variable, color=variable), alpha=0.4) +
   facet_wrap(~ Chrom, nrow=1, scales="free_x") +
   scale_y_continuous(limits=c(-1,10)) +
   scale_x_continuous(labels = xvals) +
@@ -58,7 +70,8 @@ rawplt
 dev.off()
 
 
-# Plot and save output
+###Plot + Centromere Positions Added
+
 finalplt <- ggplot(indata, aes(x=Strt, y=value)) +
   geom_line(aes(fill=variable), alpha=0.4) +
   facet_wrap(~ Chrom, nrow=1, scales="free_x") +
@@ -79,7 +92,7 @@ finalplt
 dev.off()
 
 
-#to define ranges to add to plot on each
+
   
 ##Centromere positions:
 
