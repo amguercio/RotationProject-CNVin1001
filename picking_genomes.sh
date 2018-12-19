@@ -7,18 +7,16 @@
 ######################
 
 
-######################
+
 #################################################
 ###Get Accession Info
 
 #download the table of all available sequenced accessions from the 1001 genomes project
 #at https://1001genomes.org/accessions.html
 
-#################################################
-######################
 
 
-######################
+
 #################################################
 ###Pick 50 Random Accessions (for testing purposes)
 
@@ -32,5 +30,3 @@ shuf -n 50 seqdata_list1001.csv > data_foranalyses.csv
 ###Or if on computer with zsh + homebrew -- 
 #brew install coreutils
 #gshuf -n 50 seqdata_list1001.csv > testtwo.csv
-#################################################
-######################
