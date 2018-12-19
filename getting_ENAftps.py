@@ -59,4 +59,7 @@ Outfile.close()
 #wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR194/007/SRR1945627/SRR1945627_1.fastq.gz
 #...
 
+#and to run that file would just be bash download_ftps.sh
+#this is recorded in 'reads_n_ref_dl.sh' as well
+
 
