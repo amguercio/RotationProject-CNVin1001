@@ -1,4 +1,4 @@
-#Prettytables_inR.R
+#prettytables_inR.R
 
 ##Make a pretty table from a csv
 
