@@ -1,7 +1,7 @@
 #####################
 #################################################
 #Script Name:         get_runID.py
-#Description:         python script to extract runIDs from table of Accession information from Arabidopsis 1001 genomes project
+#Description:         Python script to extract runIDs from table of Accession information from Arabidopsis 1001 genomes project
 #Author:              amguercio (Angelica Guercio) 2018
 #################################################
 ######################
