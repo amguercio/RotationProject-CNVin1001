@@ -1,7 +1,7 @@
 #####################
 #################################################
 #Script Name:         getting_ENAftps.py
-#Description:         Script using runIDs to build download link for downloading sequences
+#Description:         Python script using runIDs to build download link for downloading sequences
 #Author:              amguercio (Angelica Guercio) 2018
 #################################################
 ######################
